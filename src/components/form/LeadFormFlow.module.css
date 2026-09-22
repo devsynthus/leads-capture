@@ -1,0 +1,39 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: var(--space-7) var(--space-4);
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: var(--space-5);
+}
+
+.stage {
+  width: 100%;
+  max-width: 680px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(91, 76, 240, 0.03);
+  padding: var(--space-8) var(--space-7);
+}
+
+@media (max-width: 480px) {
+  .brandRow,
+  .stage {
+    max-width: 100%;
+  }
+
+  .stage {
+    padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-md);
+  }
+}

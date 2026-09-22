@@ -1,0 +1,122 @@
+:root {
+  color-scheme: dark;
+
+  /* Brand — centralize here; nothing below should be hardcoded elsewhere */
+  --color-button-1: #024AD8;
+  --color-button-1-hover: #1F63E8;
+  --color-button-2: #0182CA;
+  --color-button-2-hover: #1C96DB;
+
+  /* CTA color — chosen: Button Color 1. */
+  --color-primary: var(--color-button-1);
+  --color-primary-hover: var(--color-button-1-hover);
+  --color-primary-soft: rgba(2, 74, 216, 0.18);
+  --color-accent: #0182CA;
+  --color-accent-soft: rgba(1, 130, 202, 0.16);
+
+  /* Selected-option background — used consistently across every card-based single-select group. */
+  --color-selected-bg: var(--color-button-2);
+
+  --color-bg: #181818;
+  --color-surface: #232323;
+  --color-surface-raised: #2A2A2A;
+  --color-surface-inset: #181818;
+  --color-border: #333333;
+  --color-border-strong: #454545;
+
+  --color-text: #F5F5F7;
+  --color-text-muted: #B3B3B3;
+  --color-text-faint: #7A7A7A;
+  --color-text-on-primary: #FFFFFF;
+
+  --color-success: #22C55E;
+  --color-success-soft: rgba(34, 197, 94, 0.16);
+  --color-error: #F87171;
+  --color-error-soft: rgba(248, 113, 113, 0.16);
+  --color-warning: #FBBF24;
+  --color-warning-soft: rgba(251, 191, 36, 0.16);
+
+  --font-heading-family: var(--font-heading), "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-body), "Segoe UI", system-ui, sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.44);
+  --shadow-glow: 0 0 0 6px var(--color-primary-soft);
+
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 320ms;
+  --duration-slow: 520ms;
+
+  --touch-target-min: 56px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(760px 520px at 12% -8%, var(--color-primary-soft) 0%, transparent 60%),
+    radial-gradient(680px 560px at 108% 18%, var(--color-accent-soft) 0%, transparent 55%),
+    radial-gradient(900px 700px at 50% 118%, var(--color-primary-soft) 0%, transparent 50%),
+    var(--color-bg);
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading-family);
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
