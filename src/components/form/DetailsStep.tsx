@@ -57,7 +57,6 @@ export function DetailsStep({
           id="company"
           label="Company"
           autoComplete="organization"
-          optional
           value={data.company}
           error={errors.company}
           onChange={(e) => onChange("company", e.target.value)}
@@ -65,7 +64,6 @@ export function DetailsStep({
         <Select
           id="role"
           label="Role"
-          optional
           options={ROLE_OPTIONS}
           value={data.role}
           error={errors.role}
