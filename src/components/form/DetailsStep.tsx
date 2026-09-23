@@ -57,6 +57,7 @@ export function DetailsStep({
           id="company"
           label="Company"
           autoComplete="organization"
+          optional
           value={data.company}
           error={errors.company}
           onChange={(e) => onChange("company", e.target.value)}

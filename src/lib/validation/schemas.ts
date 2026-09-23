@@ -14,7 +14,7 @@ const leadCoreSchema = z.object({
   fullName: z.string().trim().min(1, "Please enter your full name.").max(120),
   email: z.string().trim().min(1, "Please enter your email.").email("Please enter a valid email address."),
   phone: z.string().trim().max(30).optional().or(z.literal("")),
-  company: z.string().trim().min(1, "Please enter your company.").max(160),
+  company: z.string().trim().max(160).optional().or(z.literal("")),
   role: z.enum(roleValues, { message: "Please choose a role." }),
   roleOther: z.string().trim().max(160).optional().or(z.literal("")),
   whatTheyDo: z.string().trim().max(600).optional().or(z.literal("")),
