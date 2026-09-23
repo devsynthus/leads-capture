@@ -1,0 +1,28 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  min-height: 100dvh;
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  max-width: 24ch;
+}
+
+.qrImage {
+  width: min(80vw, 80vh, 640px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+}
